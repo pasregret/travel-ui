@@ -75,14 +75,28 @@
       </el-table-column>
     </el-table>
     <!-- 分页 -->
-    <el-pagination
+    <!-- <el-pagination
       :current-page="page"
       :page-size="limit"
       :total="total"
       style="padding: 30px 0; text-align: center;"
       layout="total, prev, pager, next, jumper"
       @current-change="fetchData"
-    />
+    /> -->
+
+     <el-pagination 
+      @size-change="handleSizeChange"
+      @current-change="fetchData"
+      :current-page="page"
+      :page-sizes="[10, 20, 30, 40]"
+      :page-size="limit"
+      style="padding: 40px 0; text-align: right;"
+      layout="total, sizes, prev, pager, next, jumper"
+      :total="total"
+      >
+    </el-pagination>
+  </div>
+</template>
   </div>
 </template>
 
@@ -156,7 +170,11 @@ export default {
             });
           }
         });
-    }
+    },
+      handleSizeChange(val) {
+        this.limit = val;
+        this.fetchData();
+      }
   }
 };
 </script>
