@@ -48,6 +48,12 @@
         <template slot-scope="scope">{{ (page - 1) * limit + scope.$index + 1 }}</template>
       </el-table-column>
 
+       <!-- <el-table-column label="头像" width="130">
+        <template scope="scope">
+            <img :src="scope.row.avatar" class="avatar"/>
+        </template>
+    </el-table-column> -->
+
       <el-table-column prop="name" label="名称" width="80" />
 
       <el-table-column label="头衔" width="80">

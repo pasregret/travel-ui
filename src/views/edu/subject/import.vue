@@ -5,7 +5,7 @@
         <el-tag type="info">excel模版说明</el-tag>
         <el-tag>
           <i class="el-icon-download" />
-          <a :href="OSS_PATH + '/excel/课程分类列表模板.xls'">点击下载模版</a>
+          <a :href="OSS_PATH + '/excel/123.xls'">点击下载模版</a>
         </el-tag>
       </el-form-item>
 
@@ -43,7 +43,7 @@ export default {
     return {
       BASE_API: process.env.BASE_API, // 接口API地址
       OSS_PATH: process.env.OSS_PATH, // 阿里云OSS地址
-      fileUploadBtnText: "上传到服务器", // 按钮文字
+      fileUploadBtnText: '上传到服务器', // 按钮文字
       importBtnDisabled: false, // 按钮是否禁用,
       loading: false
     };
