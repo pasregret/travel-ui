@@ -69,7 +69,10 @@
               <img :src="scope.row.cover" alt="scope.row.title" width="150px" />
             </div>
             <div class="title">
-              <a href>{{ scope.row.title }}</a>
+              <!-- <a href >{{ scope.row.title }}</a> -->
+              <router-link :to="'/edu/course/publish/'+scope.row.id">
+                <el-button type="text" size="mini">{{ scope.row.title }}</el-button>
+              </router-link>
               <p>{{ scope.row.lessonNum }}课时</p>
             </div>
           </div>
